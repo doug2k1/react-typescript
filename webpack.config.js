@@ -19,7 +19,10 @@ module.exports = env => ({
       {
         test: /\.(tsx?)|(js)$/,
         exclude: /node_modules/,
-        loader: "babel-loader"
+        loader: "babel-loader",
+        options: {
+          cacheDirectory: true
+        }
       }
     ]
   }
