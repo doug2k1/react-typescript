@@ -1,4 +1,14 @@
 import React from "react";
+import styled from "styled-components";
+
+const Button = styled.button`
+  border-radius: 3px;
+  padding: 0.25em 1em;
+  margin: 0 1em;
+  background: transparent;
+  color: palevioletred;
+  border: 2px solid palevioletred;
+`;
 
 type Props = {
   lang: string;
@@ -20,6 +30,7 @@ class App extends React.Component<Props, State> {
         <p>
           Hello {this.state.who} in {this.props.lang}!
         </p>
+        <Button>styled button</Button>
       </div>
     );
   }
